@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		083F9A5D1E409B7900A8A8BB /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083F9A5C1E409B7900A8A8BB /* Book.swift */; };
 		083F9A5F1E40AAB100A8A8BB /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083F9A5E1E40AAB100A8A8BB /* Library.swift */; };
+		083F9A621E40B2CF00A8A8BB /* books_readable.json in Resources */ = {isa = PBXBuildFile; fileRef = 083F9A611E40B2CF00A8A8BB /* books_readable.json */; };
 		08ED8D271E39489F007DE8C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ED8D261E39489F007DE8C8 /* AppDelegate.swift */; };
 		08ED8D291E39489F007DE8C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ED8D281E39489F007DE8C8 /* ViewController.swift */; };
 		08ED8D2C1E39489F007DE8C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08ED8D2A1E39489F007DE8C8 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		083F9A5C1E409B7900A8A8BB /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		083F9A5E1E40AAB100A8A8BB /* Library.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
+		083F9A611E40B2CF00A8A8BB /* books_readable.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = books_readable.json; sourceTree = "<group>"; };
 		08ED8D231E39489F007DE8C8 /* HackerBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackerBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08ED8D261E39489F007DE8C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08ED8D281E39489F007DE8C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +50,14 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		083F9A601E40B2B900A8A8BB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				083F9A611E40B2CF00A8A8BB /* books_readable.json */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		08ED8D1A1E39489F007DE8C8 = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +77,7 @@
 		08ED8D251E39489F007DE8C8 /* HackerBooks */ = {
 			isa = PBXGroup;
 			children = (
+				083F9A601E40B2B900A8A8BB /* Resources */,
 				083F9A5B1E409B4500A8A8BB /* Models */,
 				08ED8D261E39489F007DE8C8 /* AppDelegate.swift */,
 				08ED8D281E39489F007DE8C8 /* ViewController.swift */,
@@ -137,6 +148,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				083F9A621E40B2CF00A8A8BB /* books_readable.json in Resources */,
 				08ED8D311E39489F007DE8C8 /* LaunchScreen.storyboard in Resources */,
 				08ED8D2E1E39489F007DE8C8 /* Assets.xcassets in Resources */,
 				08ED8D2C1E39489F007DE8C8 /* Main.storyboard in Resources */,

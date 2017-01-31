@@ -12,15 +12,26 @@ class Library {
     
     //MARK: - Utility types
     typealias BookArray = [Book]
+    typealias TagArray = Array<String>
     
     //MARK: - Properties
     var books   :   BookArray
-    var tags    :   [Tag]
+    var tags    :   TagArray
     var booksCount: Int{
         
         get{
             let count: Int = self.books.count
         }
+    }
+    
+    //MARK: - Initialization
+    init(books: BookArray,
+         tags: TagArray,
+         booksCount: Int) {
+        
+        self.books
+        self.tags
+        self.bookCount
     }
     
     //MARK: - Utils

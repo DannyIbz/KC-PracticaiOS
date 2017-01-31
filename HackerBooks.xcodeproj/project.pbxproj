@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		083F9A5D1E409B7900A8A8BB /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083F9A5C1E409B7900A8A8BB /* Book.swift */; };
 		08ED8D271E39489F007DE8C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ED8D261E39489F007DE8C8 /* AppDelegate.swift */; };
 		08ED8D291E39489F007DE8C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ED8D281E39489F007DE8C8 /* ViewController.swift */; };
 		08ED8D2C1E39489F007DE8C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08ED8D2A1E39489F007DE8C8 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		083F9A5C1E409B7900A8A8BB /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		08ED8D231E39489F007DE8C8 /* HackerBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackerBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08ED8D261E39489F007DE8C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08ED8D281E39489F007DE8C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		083F9A5B1E409B4500A8A8BB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				083F9A5C1E409B7900A8A8BB /* Book.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		08ED8D1A1E39489F007DE8C8 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +64,7 @@
 		08ED8D251E39489F007DE8C8 /* HackerBooks */ = {
 			isa = PBXGroup;
 			children = (
+				083F9A5B1E409B4500A8A8BB /* Models */,
 				08ED8D261E39489F007DE8C8 /* AppDelegate.swift */,
 				08ED8D281E39489F007DE8C8 /* ViewController.swift */,
 				08ED8D2A1E39489F007DE8C8 /* Main.storyboard */,
@@ -138,6 +149,7 @@
 			files = (
 				08ED8D291E39489F007DE8C8 /* ViewController.swift in Sources */,
 				08ED8D271E39489F007DE8C8 /* AppDelegate.swift in Sources */,
+				083F9A5D1E409B7900A8A8BB /* Book.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +309,7 @@
 				08ED8D371E39489F007DE8C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

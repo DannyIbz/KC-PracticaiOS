@@ -9,21 +9,20 @@
 import Foundation
 
 typealias Authors = Array<String>
-typealias Tags = Array<String>
 
 class Book {
     
     //MARK: - Stored Properties
     let title   :   String?
     let author  :   Authors?
-    let tags    :   Tags?
+    let tags    :   Tags
     let imageURL:   URL
     let url     :   URL
     
     //MARK: - Intialization
     init(title: String?,
          author: Authors?,
-         tags: Tags?,
+         tags: Tags,
          imageURL: URL,
          url: URL)
     {

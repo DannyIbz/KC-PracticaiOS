@@ -14,13 +14,8 @@ typealias JSONObject        =   AnyObject
 typealias JSONDictionary    =   [String: JSONObject]
 typealias JSONArray         =   [JSONDictionary]
 
-//MARK: - Decodification
+//MARK: - Decodification for Book
 func decode(HackerBooksBook json: JSONDictionary) throws -> Book {
-   
-    guard let tagsFromJson = json["tags"] as? String else {
-        
-            throw BooksError.noTags
-    }
     
     guard let imageUrl = json["image_url"] as? String,
           let image = URL(string: imageUrl) else {
@@ -36,8 +31,7 @@ func decode(HackerBooksBook json: JSONDictionary) throws -> Book {
     
     let title   =   json["title"] as? String
     let author  =   json["authors"] as? Authors
-    
-    let tags = tagsFromJson.components(separatedBy: ",")
+    let tags    =   json["tags"] as? String
     
     return Book(title: title,
                 author: author,
@@ -53,4 +47,25 @@ func decode(HackerBooksBook json: JSONDictionary?) throws -> Book {
     }
     
     return try decode(HackerBooksBook: json)
+}
+
+
+//MARK: - Decodification for Tags
+func decode(BooksTags json: JSONDictionary) throws -> Tags {
+    
+    guard let tagsFromJson = json["tags"] as? String else {
+        
+        throw BooksError.noTags
+    }
+    
+    return Tags(name: tagsFromJson)
+}
+
+func decode(BooksTags json: JSONDictionary?) throws -> Tags {
+    
+    guard let json = json else {
+        throw BooksError.jsonParsingError
+    }
+    
+    return try decode(BooksTags: json)
 }

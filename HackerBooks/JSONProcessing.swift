@@ -31,7 +31,7 @@ func decode(HackerBooksBook json: JSONDictionary) throws -> Book {
     
     let title   =   json["title"] as? String
     let author  =   json["authors"] as? Authors
-    let tags    =   json["tags"] as? String
+    let tags    =   json["tags"] as? Tags
     
     return Book(title: title,
                 author: author,
@@ -53,7 +53,7 @@ func decode(HackerBooksBook json: JSONDictionary?) throws -> Book {
 //MARK: - Decodification for Tags
 func decode(BooksTags json: JSONDictionary) throws -> Tags {
     
-    guard let tagsFromJson = json["tags"] as? String else {
+    guard let tagsFromJson = json["tags"] as? tags? else {
         
         throw BooksError.noTags
     }
@@ -72,7 +72,19 @@ func decode(BooksTags json: JSONDictionary?) throws -> Tags {
 
 
 //MARK: - Loading
-
+func loadFromLocalFile(fileName name: String, bundle: Bundle = Bundle.main) throws -> JSONArray{
+    
+    if let url = bundle.url(forAuxiliaryExecutable: name),
+        let data = try? Data(contentsOf: url),
+        let maybeArray = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? JSONArray,
+        let array = maybeArray{
+        
+        return array
+        
+    }else{
+        throw BooksError.jsonParsingError
+    }
+}
 
 
 

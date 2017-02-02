@@ -69,3 +69,36 @@ func decode(BooksTags json: JSONDictionary?) throws -> Tags {
     
     return try decode(BooksTags: json)
 }
+
+
+//MARK: - Loading
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

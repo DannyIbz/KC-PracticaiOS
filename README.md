@@ -6,7 +6,7 @@ En el siguiente documento encontrará toda la información relevante sobre el ma
 <br>
 ###¿Qué és HackerBooks?
 
-*HackerBooks* es un lector de libros en PDF para iPhone & iPad. Los libros en sí se reciben en un JSON descargado mediante una URL y que serán almacenados en el dispositivo según se vaya accediendo a dichos libros.
+*HackerBooks* es un lector de libros en PDF para iPhone & iPad. La librería con los libros disponibles se recibe a través de un JSON que se descarga de una URL. Dichos libros se irán descargando y almacenando en el dispositivo según se vaya accediendo a ellos.
 
 
 

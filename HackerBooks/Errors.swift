@@ -13,4 +13,5 @@ enum BooksError : Error {
     case wrongURLFormat
     case resourcePointedByURLNotReachable
     case jsonParsingError
+    case noTags
 }

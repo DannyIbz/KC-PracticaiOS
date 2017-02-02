@@ -16,11 +16,10 @@ typealias JSONArray         =   [JSONDictionary]
 
 //MARK: - Decodification
 func decode(HackerBooksBook json: JSONDictionary) throws -> Book {
-    
-    guard let urlString = json["pdf_url"] as? String,
-          let url = URL(string: urlString) else {
-          
-            throw BooksError.wrongURLFormat
+   
+    guard let tagsFromJson = json["tags"] as? String else {
+        
+            throw BooksError.noTags
     }
     
     guard let imageUrl = json["image_url"] as? String,
@@ -29,9 +28,16 @@ func decode(HackerBooksBook json: JSONDictionary) throws -> Book {
             throw BooksError.resourcePointedByURLNotReachable
     }
     
+    guard let urlString = json["pdf_url"] as? String,
+        let url = URL(string: urlString) else {
+            
+            throw BooksError.wrongURLFormat
+    }
+    
     let title   =   json["title"] as? String
     let author  =   json["authors"] as? Authors
-    let tags    =   json["tags"] as? Tags
+    
+    let tags = tagsFromJson.components(separatedBy: ",")
     
     return Book(title: title,
                 author: author,

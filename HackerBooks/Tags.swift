@@ -12,11 +12,15 @@ typealias tags = Array<String>
 
 class Tags {
     
-    //MARK: - Properties
     let name : tags?
+    var tagList : String
     
-    init(name: tags?){
+    init(name: tags?,
+         tagList: String){
         self.name = name
+        self.tagList = tagList
     }
+    
+    var tagList = name.map { $0 }
     
 }

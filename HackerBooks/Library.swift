@@ -8,6 +8,13 @@
 
 import Foundation
 
+typealias tag = String
+typealias book = String
+
 class Library {
+    
+    var library = MultiDictionary<tag, book>()
+    
+    
     
 }

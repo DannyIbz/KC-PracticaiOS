@@ -10,14 +10,23 @@ import Foundation
 
 typealias Tags = Set<Tag>
 
-class Tag: Hashable {
+class Tag {
     
     let name : String
-    var hashName : String {
-        return self.name
-    }
     
     init(name: String) {
         self.name = name
+    }
+    
+}
+
+extension Tag : Hashable {
+    
+    var hashValue : Int {
+        return name.hashValue
+    }
+    
+    static func == (lhs: Tag, rhs: Tag) -> Bool {
+        return lhs.name == rhs.name
     }
 }

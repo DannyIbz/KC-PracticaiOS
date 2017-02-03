@@ -12,6 +12,8 @@
 		083F9A621E40B2CF00A8A8BB /* books_readable.json in Resources */ = {isa = PBXBuildFile; fileRef = 083F9A611E40B2CF00A8A8BB /* books_readable.json */; };
 		083F9A641E41138700A8A8BB /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083F9A631E41138700A8A8BB /* Errors.swift */; };
 		083F9A661E41148000A8A8BB /* JSONProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083F9A651E41148000A8A8BB /* JSONProcessing.swift */; };
+		083F9A7E1E43597100A8A8BB /* MultiDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083F9A7D1E43597100A8A8BB /* MultiDictionary.swift */; };
+		083F9A811E43C07A00A8A8BB /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083F9A801E43C07A00A8A8BB /* Tag.swift */; };
 		08ED8D271E39489F007DE8C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ED8D261E39489F007DE8C8 /* AppDelegate.swift */; };
 		08ED8D291E39489F007DE8C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ED8D281E39489F007DE8C8 /* ViewController.swift */; };
 		08ED8D2C1E39489F007DE8C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08ED8D2A1E39489F007DE8C8 /* Main.storyboard */; };
@@ -19,12 +21,27 @@
 		08ED8D311E39489F007DE8C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08ED8D2F1E39489F007DE8C8 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		083F9A7C1E43589400A8A8BB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		083F9A5C1E409B7900A8A8BB /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		083F9A5E1E40AAB100A8A8BB /* Library.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		083F9A611E40B2CF00A8A8BB /* books_readable.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = books_readable.json; sourceTree = "<group>"; };
 		083F9A631E41138700A8A8BB /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		083F9A651E41148000A8A8BB /* JSONProcessing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONProcessing.swift; sourceTree = "<group>"; };
+		083F9A7D1E43597100A8A8BB /* MultiDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiDictionary.swift; sourceTree = "<group>"; };
+		083F9A801E43C07A00A8A8BB /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		08ED8D231E39489F007DE8C8 /* HackerBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackerBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08ED8D261E39489F007DE8C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08ED8D281E39489F007DE8C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,10 +65,12 @@
 		083F9A5B1E409B4500A8A8BB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				083F9A7D1E43597100A8A8BB /* MultiDictionary.swift */,
 				083F9A5C1E409B7900A8A8BB /* Book.swift */,
 				083F9A5E1E40AAB100A8A8BB /* Library.swift */,
 				083F9A631E41138700A8A8BB /* Errors.swift */,
 				083F9A651E41148000A8A8BB /* JSONProcessing.swift */,
+				083F9A801E43C07A00A8A8BB /* Tag.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -105,6 +124,7 @@
 				08ED8D1F1E39489F007DE8C8 /* Sources */,
 				08ED8D201E39489F007DE8C8 /* Frameworks */,
 				08ED8D211E39489F007DE8C8 /* Resources */,
+				083F9A7C1E43589400A8A8BB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -172,6 +192,8 @@
 				08ED8D291E39489F007DE8C8 /* ViewController.swift in Sources */,
 				083F9A641E41138700A8A8BB /* Errors.swift in Sources */,
 				083F9A5F1E40AAB100A8A8BB /* Library.swift in Sources */,
+				083F9A811E43C07A00A8A8BB /* Tag.swift in Sources */,
+				083F9A7E1E43597100A8A8BB /* MultiDictionary.swift in Sources */,
 				08ED8D271E39489F007DE8C8 /* AppDelegate.swift in Sources */,
 				083F9A5D1E409B7900A8A8BB /* Book.swift in Sources */,
 			);
@@ -293,6 +315,7 @@
 		08ED8D361E39489F007DE8C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HackerBooks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -305,6 +328,7 @@
 		08ED8D371E39489F007DE8C8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HackerBooks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

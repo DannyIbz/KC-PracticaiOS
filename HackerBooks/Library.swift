@@ -8,10 +8,6 @@
 
 import Foundation
 
-public
-struct Library<Tags: Hashable, Book: Hashable> {
-    
-    
-    //MARK: - Properties
+class Library {
     
 }

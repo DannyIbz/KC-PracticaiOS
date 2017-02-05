@@ -33,3 +33,19 @@ class Book {
         self.url = url
     }
 }
+
+extension Book: Hashable {
+    
+    var hashValue : Int {
+        
+        guard let title = title else {
+            return 0
+        }
+        
+        return title.hashValue
+    }
+    
+    static func == (lhs: Book, rhs: Book) -> Bool {
+        return lhs.title == rhs.title
+    }
+}

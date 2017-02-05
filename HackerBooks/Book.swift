@@ -15,14 +15,14 @@ class Book {
     //MARK: - Stored Properties
     let title   :   String?
     let author  :   Authors?
-    let tags    :   Tag
+    let tags    :   [Tag]
     let imageURL:   URL
     let url     :   URL
     
     //MARK: - Intialization
     init(title: String?,
          author: Authors?,
-         tags: Tag,
+         tags: [Tag],
          imageURL: URL,
          url: URL)
     {
@@ -31,6 +31,17 @@ class Book {
         self.tags = tags
         self.imageURL = imageURL
         self.url = url
+    }
+    
+    //MARK: - Proxies
+    func proxieForEquality() -> String {
+        
+        return "\(title?.hashValue)\(author)\(tags)\(imageURL)\(url)"
+    }
+    
+    func proxieForComparison() -> String {
+        
+        return proxieForEquality()
     }
 }
 
@@ -47,5 +58,13 @@ extension Book: Hashable {
     
     static func == (lhs: Book, rhs: Book) -> Bool {
         return lhs.title == rhs.title
+    }
+}
+
+extension Book: Comparable {
+    
+    public static func <(lhs: Book, rhs: Book) -> Bool {
+        
+        return (lhs.proxieForComparison() < rhs.proxieForComparison())
     }
 }

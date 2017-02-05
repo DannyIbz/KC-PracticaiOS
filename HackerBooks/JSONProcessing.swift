@@ -17,7 +17,7 @@ typealias JSONArray         =   [JSONDictionary]
 //MARK: - Decodification for Book
 func decode(HackerBooksBook json: JSONDictionary) throws -> Book {
     
-    guard let tagsFromJson = json["tags"] as? [String] else {
+    guard let tagsFromJson = json["tags"] as? String else {
         
         throw BooksError.noTags
     }

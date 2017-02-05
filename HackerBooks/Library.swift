@@ -31,8 +31,7 @@ class Library {
     // Array de los libros que hay de una misma temática
     func books(atIndex index: Int, forTagName name: Tag) -> [Book]? {
         
-        let books = lib.keys.sorted
-        let book = Book(books)
-        return book
+        let books = lib[name]?.sorted()
+        return books
     }
 }

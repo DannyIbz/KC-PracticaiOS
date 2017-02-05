@@ -8,13 +8,31 @@
 
 import Foundation
 
-typealias tag = String
-typealias book = String
-
 class Library {
     
-    var library = MultiDictionary<tag, book>()
+    var lib = MultiDictionary<Tag, Book>()
     
+    //MARK: - Accessors
     
-    
+    // Número total de libros
+    var booksCount : Int {
+        
+        get{
+            return lib.countUnique
+        }
+    }
+   
+    // Cantidad de libros que hay de una misma temática
+    func bookCount(forTagName name: Tag) -> Int {
+        
+        return lib.buckets.count
+    }
+   
+    // Array de los libros que hay de una misma temática
+    func books(atIndex index: Int, forTagName name: Tag) -> [Book]? {
+        
+        let books = lib.keys.sorted
+        let book = Book(books)
+        return book
+    }
 }

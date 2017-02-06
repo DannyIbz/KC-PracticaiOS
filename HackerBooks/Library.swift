@@ -38,7 +38,7 @@ class Library {
     // Libro que está en la posición "index" de aquellos bajo un cierto tag
     func book(forTagName name: Tag, at: Int) -> Book? {
         
-        let bookAtIndex = lib[books]?.index(0)
+        let bookAtIndex = lib[name]?.index(0)
         
         return bookAtIndex
     }

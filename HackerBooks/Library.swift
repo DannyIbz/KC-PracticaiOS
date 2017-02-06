@@ -34,4 +34,12 @@ class Library {
         let books = lib[name]?.sorted()
         return books
     }
+    
+    // Libro que está en la posición "index" de aquellos bajo un cierto tag
+    func book(forTagName name: Tag, at: Int) -> Book? {
+        
+        let bookAtIndex = lib[books]?.index(0)
+        
+        return bookAtIndex
+    }
 }

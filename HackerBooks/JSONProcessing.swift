@@ -37,7 +37,9 @@ func decode(HackerBooksBook json: JSONDictionary) throws -> Book {
     let title   =   json["title"] as? String
     let author  =   json["authors"] as? Authors
     
-    let tags = tagsFromJson.components(separatedBy: ",")
+    let jsonTags = tagsFromJson.components(separatedBy: ",")
+    
+    let tags = jsonTags.map({Tag(name: $0)})
     
     return Book(title: title,
                 author: author,

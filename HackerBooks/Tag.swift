@@ -8,8 +8,6 @@
 
 import Foundation
 
-typealias Tags = Set<Tag>
-
 class Tag {
     
     let name : String
@@ -19,6 +17,7 @@ class Tag {
     }
     
 }
+
 
 extension Tag : Hashable {
     

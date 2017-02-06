@@ -15,14 +15,14 @@ class Book {
     //MARK: - Stored Properties
     let title   :   String?
     let author  :   Authors?
-    let tags    :   [Tag]
+    let tags    :   Tag
     let imageURL:   URL
     let url     :   URL
     
     //MARK: - Intialization
     init(title: String?,
          author: Authors?,
-         tags: [Tag],
+         tags: Tag,
          imageURL: URL,
          url: URL)
     {

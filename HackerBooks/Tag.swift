@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias TagSet = Set<Tag>
+
 class Tag {
     
     let name : String

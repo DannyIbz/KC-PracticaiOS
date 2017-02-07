@@ -30,6 +30,20 @@ class Library {
         }
     }
     
+    // Array de Tags
+    var tags : [Tag] {
+        
+        get {
+            var taags : [Tag] = []
+            
+            for tag in lib.keys {
+            
+                taags.append(tag)
+            }
+            return taags
+        }
+    }
+    
     // Cantidad de libros que hay de una misma temática
     func bookCount(forTagName name: Tag) -> Int {
         

@@ -15,7 +15,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // Creamos una UIWindow
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        // Instancia del modelo
+        do {
+            
+            let json = try loadFromLocalFile(fileName: "books_readable.json")
+            
+            var books = [Book]()
+            for lib in json {
+                do {
+                    let book = try decode(HackerBooksBook: lib)
+                    books.append(book)
+                }catch{
+                    print("Error al procesar \(lib)")
+                }
+            }
+            
+            let model = Library(books: Book)
+            
+            let uVC = LibraryTableViewController(model: model)
+            
+            let uNav = UINavigationController(rootViewController: uVC)
+            
+            window?.rootViewController = uNav
+            
+            window?.makeKeyAndVisible()
+            
+            return true
+            
+        }catch{
+            
+            fatalError("Error while loading Model from JSON")
+        }
+    
         return true
     }
 

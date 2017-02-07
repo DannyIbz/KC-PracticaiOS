@@ -22,10 +22,18 @@ class Library {
         }
     }
    
+    // Número total de Tags
+    var tagsCount : Int {
+        
+        get{
+            return lib.keys.count
+        }
+    }
+    
     // Cantidad de libros que hay de una misma temática
     func bookCount(forTagName name: Tag) -> Int {
         
-        return lib.buckets.count
+        return lib.countBuckets
     }
    
     // Array de los libros que hay de una misma temática

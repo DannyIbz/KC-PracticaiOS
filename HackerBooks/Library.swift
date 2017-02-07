@@ -30,10 +30,18 @@ class Library {
         }
     }
     
+    // Tags ordenados
+    func tag(forTagName name: Tag, at: Int) -> Tag {
+        
+        let tagAtIndex = lib.keys.sorted()[at]
+        
+        return tagAtIndex
+    }
+    
     // Cantidad de libros que hay de una misma temática
     func bookCount(forTagName name: Tag) -> Int {
         
-        return lib.countBuckets
+        return lib.buckets.count
     }
    
     // Array de los libros que hay de una misma temática

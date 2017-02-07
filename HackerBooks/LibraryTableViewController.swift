@@ -12,11 +12,14 @@ class LibraryTableViewController: UITableViewController {
     
     //MARK: - Properties
     let model : Library
+    let getTags : Tag
     
     
     //MARK: - Initialization
-    init(model: Library) {
+    init(model: Library,
+         getTags: Tag) {
         self.model = model
+        self.getTags = getTags
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -38,13 +41,9 @@ class LibraryTableViewController: UITableViewController {
         // Incomplete implementation, return the number of rows
         // Número de libros dentro de cada Tag
         
-        return model.bookCount(forTagName: getTags(forSection: section))
+        return model.bookCount(forTagName: getTags)
     }
     
     
-    //MARK: - Utils
-    func getTags(forSection section: Int) -> Tag {
-        
-        
-    }
+    
 }

@@ -29,20 +29,17 @@ class LibraryTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // Incomplete implementation, return the number of sections
-        return model.booksCount
+        // Se crea una sección por cada Tag distinto
+        return model.tagsCount
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Incomplete implementation, return the number of rows
+        // Número de libros dentro de cada Tag
         
-        return 0
+        return model.bookCount(forTagName: Tag)
     }
     
     
-    //MARK: - Utils
-    func getTagName(forSection section: Int) -> Tag {
-        
-        
-    }
     
 }

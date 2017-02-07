@@ -13,14 +13,11 @@ class LibraryTableViewController: UITableViewController {
     
     //MARK: - Properties
     let model : Library
-    let getTags : Tag
     
     
     //MARK: - Initialization
-    init(model: Library,
-         getTags: Tag) {
+    init(model: Library) {
         self.model = model
-        self.getTags = getTags
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -42,13 +39,13 @@ class LibraryTableViewController: UITableViewController {
         // Incomplete implementation, return the number of rows
         // Número de libros dentro de cada Tag
         
-        return model.bookCount(forTagName: getTags)
+        return model.bookCount(forTagName: getTags(forSection: section))
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         // Muestra el título de grupo según tag
         
-        return model.book(forTagName: getTags, at: section)
+        return model.tags.description
     }
     
     
@@ -56,8 +53,11 @@ class LibraryTableViewController: UITableViewController {
         // Definir un id para el tipo de celda
         let cellId = "BookCell"
         
+        // Averigua el tag
+        let tagBook = getTags(forSection: indexPath.section)
+        
         // Averiguar qué libro es
-        let book = model.book(forTagName: getTags, at: indexPath.section)
+        let book = model.book(forTagName: tagBook, at: indexPath.row)
         
         // Crear la celda
         var cell = tableView.dequeueReusableCell(withIdentifier: cellId)
@@ -78,12 +78,17 @@ class LibraryTableViewController: UITableViewController {
     
     
     //MARK: - Utils
+    func getTags(forSection section: Int) -> Tag{
+    
+        return model.tags[section]
+    }
+    
+    
     func loadImage(path: String) -> UIImage? {
         
         let image = UIImage(contentsOfFile: path)
         
         if image == nil {
-            
             print("No image found")
         }
         

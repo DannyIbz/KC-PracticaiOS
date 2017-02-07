@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class LibraryTableViewController: UITableViewController {
     
     //MARK: - Properties
@@ -44,6 +45,60 @@ class LibraryTableViewController: UITableViewController {
         return model.bookCount(forTagName: getTags)
     }
     
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        // Muestra el título de grupo según tag
+        
+        return model.book(forTagName: getTags, at: section)
+    }
     
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // Definir un id para el tipo de celda
+        let cellId = "BookCell"
+        
+        // Averiguar qué libro es
+        let book = model.book(forTagName: getTags, at: indexPath.section)
+        
+        // Crear la celda
+        var cell = tableView.dequeueReusableCell(withIdentifier: cellId)
+        
+        if cell == nil {
+            
+            cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellId)
+        }
+        
+        // Configurarla
+        cell?.imageView?.image = loadImage(path: "book-image.jpg")
+        cell?.textLabel?.text = book?.title
+        cell?.detailTextLabel?.text = book?.title
+        
+        // Devolverla
+        return cell!
+    }
+    
+    
+    //MARK: - Utils
+    func loadImage(path: String) -> UIImage? {
+        
+        let image = UIImage(contentsOfFile: path)
+        
+        if image == nil {
+            
+            print("No image found")
+        }
+        
+        return image
+    }
     
 }
+
+
+
+
+
+
+
+
+
+
+

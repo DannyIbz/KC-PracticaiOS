@@ -12,8 +12,14 @@ class Library {
     
     var lib = MultiDictionary<Tag, Book>()
     
-    //MARK: - Accessors
+    //MARK: - Initialization
+    init(books bks: Library) {
+        
+        
+    }
     
+    
+    //MARK: - Accessors
     // Número total de libros
     var booksCount : Int {
         

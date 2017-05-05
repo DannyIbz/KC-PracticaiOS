@@ -12,13 +12,13 @@ typealias BooksArray = [Book]
 
 class Library {
     
-    var bks = BooksArray
+    var bks = BooksArray()
     var lib = MultiDictionary<Tag, Book>()
     
     //MARK: - Initialization
     init(bks : BooksArray) {
         
-        self.bks = BooksArray
+        self.bks = BooksArray()
     }
     
     

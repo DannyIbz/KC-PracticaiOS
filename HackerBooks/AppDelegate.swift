@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             }
             
-            let model = Library(books: Book)
+            let model = Library(bookArray: Book)
             
             let uVC = LibraryTableViewController(model: model)
             

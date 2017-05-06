@@ -16,9 +16,11 @@ class Library {
     var lib = MultiDictionary<Tag, Book>()
     
     //MARK: - Initialization
-    init(bks : BooksArray) {
+    init(bks : BooksArray,
+         lib : MultiDictionary<Tag, Book>) {
         
         self.bks = BooksArray()
+        self.lib = MultiDictionary()
     }
     
     

@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             }
             
-            let model = Library(bks: books)
+            let model = Library(bks: books, lib:  MultiDictionary<Tag, Book>)
             
             let uVC = LibraryTableViewController(model: model)
             

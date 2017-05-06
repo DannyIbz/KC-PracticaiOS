@@ -12,15 +12,12 @@ typealias BooksArray = [Book]
 
 class Library {
     
-    var bks = BooksArray()
-    var lib = MultiDictionary<Tag, Book>()
+    var books : MultiDictionary<Tag, Book>
     
     //MARK: - Initialization
-    init(bks : BooksArray,
-         lib : MultiDictionary<Tag, Book>) {
+    init(books : BooksArray) {
         
-        self.bks = BooksArray()
-        self.lib = MultiDictionary()
+        self.books = MultiDictionary<Tag, Book>()
     }
     
     
@@ -29,7 +26,7 @@ class Library {
     var booksCount : Int {
         
         get{
-            return lib.countUnique
+            return books.countUnique
         }
     }
    
@@ -37,7 +34,7 @@ class Library {
     var tagsCount : Int {
         
         get{
-            return lib.keys.count
+            return books.keys.count
         }
     }
     
@@ -47,7 +44,7 @@ class Library {
         get {
             var taags : [Tag] = []
             
-            for tag in lib.keys {
+            for tag in books.keys {
             
                 taags.append(tag)
             }
@@ -58,20 +55,20 @@ class Library {
     // Cantidad de libros que hay de una misma temática
     func bookCount(forTagName name: Tag) -> Int {
         
-        return lib.buckets.count
+        return books.buckets.count
     }
    
     // Array de los libros que hay de una misma temática
     func books(atIndex index: Int, forTagName name: Tag) -> [Book]? {
         
-        let books = lib[name]?.sorted()
+        let books = books[name]?.sorted()
         return books
     }
     
     // Libro que está en la posición "index" de aquellos bajo un cierto tag
     func book(forTagName name: Tag, at: Int) -> Book? {
         
-        let bookAtIndex = lib[name]?.sorted()[at]
+        let bookAtIndex = books[name]?.sorted()[at]
         
         return bookAtIndex
     }

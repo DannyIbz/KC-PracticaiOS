@@ -37,10 +37,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             let model = Library(books: books)
             
-            print(model.booksCount)
-            print(model.tagsCount)
-            print(model.tags)
-            print(model.books.keys)
+//            print(model.booksCount)
+//            print(model.tagsCount)
+//            print(model.tags)
+//            print(model.books.keys)
             
             let uVC = LibraryTableViewController(model: model)
             

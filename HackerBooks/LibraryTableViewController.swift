@@ -45,7 +45,10 @@ class LibraryTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         // Muestra el título de grupo según tag
         
-        return model.tags.description
+        let tag = model.tags[section]
+        let tagName = tag.name
+        
+        return tagName
     }
     
     

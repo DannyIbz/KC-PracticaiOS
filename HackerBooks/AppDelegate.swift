@@ -19,39 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Creamos una UIWindow
         window = UIWindow(frame: UIScreen.main.bounds)
         
-//        do {
-//            
-//            let json = try loadFromLocalFile(fileName: "books_readable2.json")
-//            
-//            var books = [Book]()
-//            for lib in json {
-//                do {
-//                    let book = try decode(HackerBooksBook: lib)
-//                    books.append(book)
-//                }catch{
-//                    print("Error al procesar \(lib)")
-//                }
-//            }
-//            
-//            
-//            let lib = Library(books: books)
-//            
-//            
-//            
-//            window?.rootViewController = lib
-//            
-//            return true
-//            
-//        }catch{
-//            
-//            fatalError("Error while loading Model from JSON")
-//        }
-        
         
         // Instancia del modelo
         do {
             
-            let json = try loadFromLocalFile(fileName: "books_readable.json")
+            let json = try loadFromLocalFile(fileName: "books_readable2.json")
             
             var books = [Book]()
             for lib in json {
@@ -68,6 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print(model.booksCount)
             print(model.tagsCount)
             print(model.tags)
+            print(model.books.keys)
             
             let uVC = LibraryTableViewController(model: model)
             

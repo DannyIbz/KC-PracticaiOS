@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0819BCD21EBF82C300B0EE88 /* books_readable2.json in Resources */ = {isa = PBXBuildFile; fileRef = 0819BCD11EBF82C300B0EE88 /* books_readable2.json */; };
 		083F9A5D1E409B7900A8A8BB /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083F9A5C1E409B7900A8A8BB /* Book.swift */; };
 		083F9A5F1E40AAB100A8A8BB /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083F9A5E1E40AAB100A8A8BB /* Library.swift */; };
 		083F9A621E40B2CF00A8A8BB /* books_readable.json in Resources */ = {isa = PBXBuildFile; fileRef = 083F9A611E40B2CF00A8A8BB /* books_readable.json */; };
@@ -38,6 +39,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0819BCD11EBF82C300B0EE88 /* books_readable2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = books_readable2.json; sourceTree = "<group>"; };
 		083F9A5C1E409B7900A8A8BB /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		083F9A5E1E40AAB100A8A8BB /* Library.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		083F9A611E40B2CF00A8A8BB /* books_readable.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = books_readable.json; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			children = (
 				0884C43C1E4A1E7500340735 /* book-image.jpg */,
 				083F9A611E40B2CF00A8A8BB /* books_readable.json */,
+				0819BCD11EBF82C300B0EE88 /* books_readable2.json */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				083F9A621E40B2CF00A8A8BB /* books_readable.json in Resources */,
 				08ED8D311E39489F007DE8C8 /* LaunchScreen.storyboard in Resources */,
 				0884C43B1E4909BC00340735 /* LibraryTableViewController.xib in Resources */,
+				0819BCD21EBF82C300B0EE88 /* books_readable2.json in Resources */,
 				08ED8D2E1E39489F007DE8C8 /* Assets.xcassets in Resources */,
 				08ED8D2C1E39489F007DE8C8 /* Main.storyboard in Resources */,
 			);

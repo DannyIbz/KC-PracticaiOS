@@ -57,7 +57,7 @@ class LibraryTableViewController: UITableViewController {
         let tagBook = getTags(forSection: indexPath.section)
         
         // Averiguar qué libro es
-        let book = model.book(forTagName: tagBook, at: indexPath.row)
+        let book = model.books(atIndex: indexPath.row, forTagName: tagBook)
         
         // Crear la celda
         var cell = tableView.dequeueReusableCell(withIdentifier: cellId)
@@ -69,8 +69,8 @@ class LibraryTableViewController: UITableViewController {
         
         // Configurarla
         cell?.imageView?.image = loadImage(path: "book-image.jpg")
-        cell?.textLabel?.text = book?.title
-        cell?.detailTextLabel?.text = book?.title
+//        cell?.textLabel?.text = book?.title
+//        cell?.detailTextLabel?.text = book?.title
         
         // Devolverla
         return cell!

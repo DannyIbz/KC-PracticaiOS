@@ -36,8 +36,9 @@ class Library {
         get{
             return books.countUnique
         }
+        
     }
-   
+    
     // Número total de Tags
     var tagsCount : Int {
         
@@ -74,9 +75,9 @@ class Library {
     }
     
     // Libro que está en la posición "index" de aquellos bajo un cierto tag
-    func book(forTagName name: Tag, at: Int) -> Book? {
+    func indexBook(forTagName name: Tag, at: Int) -> Book? {
         
-        let bookAtIndex = books[name]?.sorted()[at]
+        let bookAtIndex = self.books[name]?.sorted()[0]
         
         return bookAtIndex
     }

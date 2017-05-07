@@ -18,6 +18,14 @@ class Library {
     init(books : BooksArray) {
         
         self.books = MultiDictionary<Tag, Book>()
+        
+        for book in books {
+            
+            for tag in book.tags {
+                
+                self.books.insert(value: book, forKey: tag)
+            }
+        }
     }
     
     
@@ -61,7 +69,7 @@ class Library {
     // Array de los libros que hay de una misma temática
     func books(atIndex index: Int, forTagName name: Tag) -> [Book]? {
         
-        let books = books[name]?.sorted()
+        let books = self.books[name]?.sorted()
         return books
     }
     
